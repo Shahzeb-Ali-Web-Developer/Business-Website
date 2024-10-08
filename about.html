@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us - Your Business Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0a3d62;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 300;
+        }
+        nav ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffbe76;
+        }
+
+        /* About Section */
+        .about-us {
+            background-color: white;
+            padding: 80px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .about-us h2 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            color: #0a3d62;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .about-us p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+        .about-us img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* Mission & Vision Section */
+        .mission-vision {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #f1f2f6;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .mission-vision .content {
+            width: 45%;
+        }
+        .mission-vision h3 {
+            color: #0a3d62;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .mission-vision p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            margin-top: 50px;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .mission-vision {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .mission-vision .content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Your Business Name</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>
+            Founded in [Year], [Your Business Name] has been a pioneer in delivering innovative business solutions that help companies
+            around the world thrive in competitive markets. Our expertise lies in [Industry/Field], and we take pride in offering
+            customized solutions tailored to meet the unique needs of every client.
+        </p>
+        <p>
+            Our team of professionals is dedicated to pushing boundaries and staying ahead of industry trends to ensure that we provide
+            our clients with the most up-to-date solutions. From our headquarters in [City], we have helped companies both big and small
+            streamline their operations, improve productivity, and achieve sustainable growth.
+        </p>
+        <img src="about-us-image.jpg" alt="About Us Image">
+        <p>
+            Our focus has always been on building long-term relationships with our clients, grounded in trust, transparency, and mutual respect.
+            We believe in collaboration and the power of teamwork, which is why we work closely with our clients to understand their goals and
+            develop strategies that align with their vision. With a diverse team of industry experts and a passion for excellence, we are committed
+            to delivering results that exceed expectations.
+        </p>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="content">
+            <h3>Our Mission</h3>
+            <p>
+                Our mission is to provide world-class solutions that empower businesses to achieve their goals. We strive to innovate and continuously
+                improve our services to stay ahead in the market while ensuring our clients benefit from cutting-edge technology and best practices.
+            </p>
+        </div>
+        <div class="content">
+            <h3>Our Vision</h3>
+            <p>
+                Our vision is to be the global leader in [Industry/Field], driving success for our clients through innovative solutions, strategic insights,
+                and unparalleled service. We aim to foster a culture of excellence, creativity, and integrity, and to make a positive impact on the business world.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Business Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

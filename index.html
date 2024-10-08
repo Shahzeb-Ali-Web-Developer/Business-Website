@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Professional Business Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0a3d62;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 300;
+        }
+        nav ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffbe76;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-image: url('heroimage.jpg');
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        #hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        #hero .typed-text {
+            font-size: 2em;
+            color: #ffbe76;
+            font-weight: 700;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #0a3d62;
+            text-transform: uppercase;
+        }
+        section p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .services .service-item {
+            display: inline-block;
+            width: 30%;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .services .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .services img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .services .service-item h3 {
+            color: #0a3d62;
+            margin-bottom: 15px;
+        }
+
+        /* Team Section */
+        .team {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .team .team-member {
+            width: 30%;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .team img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .team h3 {
+            margin: 10px 0;
+            color: #0a3d62;
+        }
+        .team p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .testimonial {
+            width: 30%;
+            padding: 20px;
+            background-color: #f1f2f6;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial p {
+            font-size: 1em;
+            font-style: italic;
+        }
+        .testimonial .client-name {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #0a3d62;
+        }
+
+        /* Contact Section */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        form input[type="submit"] {
+            background-color: #0a3d62;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        form input[type="submit"]:hover {
+            background-color: #ffbe76;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .services .service-item, .team .team-member, .testimonial {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Your Business Name</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div>
+            <h2>Welcome to <span class="typed-text">Professional Solutions</span></h2>
+            <p>Delivering innovative solutions for business success</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a top-tier company specializing in [Your Industry]. Our mission is to deliver outstanding services and innovative solutions to our clients, helping them succeed in today’s competitive market.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <img src="service5.jpg" alt="Service 1">
+            <h3>Service 1</h3>
+            <p>We provide high-quality, customizable services to meet your needs and goals.</p>
+        </div>
+        <div class="service-item">
+            <img src="service4.jpg" alt="Service 2">
+            <h3>Service 2</h3>
+            <p>Expert consultation and support that brings tangible results to your business.</p>
+        </div>
+        <div class="service-item">
+            <img src="service6.jpg" alt="Service 3">
+            <h3>Service 3</h3>
+            <p>Dedicated teams with the expertise to drive innovation and value creation.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <h3>John Doe</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <h3>Jane Smith</h3>
+                <p>Chief Technology Officer</p>
+            </div>
+            <div class="team-member">
+                <h3>Mike Johnson</h3>
+                <p>Head of Marketing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"This company transformed our business and exceeded expectations!"</p>
+                <p class="client-name">- Client Name 1</p>
+            </div>
+            <div class="testimonial">
+                <p>"Incredible service and support from a highly professional team."</p>
+                <p class="client-name">- Client Name 2</p>
+            </div>
+            <div class="testimonial">
+                <p>"We highly recommend their services for anyone seeking business success."</p>
+                <p class="client-name">- Client Name 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Business Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const typedText = document.querySelector('.typed-text');
+        const phrases = ["Your Business Name", "Professional Solutions", "Innovative Ideas"];
+
+        let phraseIndex = 0;
+        let letterIndex = 0;
+        let currentPhrase = [];
+        let isDeleting = false;
+
+        function loop() {
+            typedText.innerHTML = currentPhrase.join('');
+
+            if (!isDeleting && letterIndex <= phrases[phraseIndex].length) {
+                currentPhrase.push(phrases[phraseIndex][letterIndex]);
+                letterIndex++;
+                setTimeout(loop, 200);
+            } else if (isDeleting && letterIndex > 0) {
+                currentPhrase.pop();
+                letterIndex--;
+                setTimeout(loop, 100);
+            } else if (letterIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(loop, 500);
+            } else {
+                isDeleting = true;
+                setTimeout(loop, 1000);
+            }
+        }
+
+        loop();
+    </script>
+</body>
+</html>

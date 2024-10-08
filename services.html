@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Our Services - Your Business Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0a3d62;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 300;
+        }
+        nav ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffbe76;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: white;
+            padding: 80px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .services h2 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            color: #0a3d62;
+            margin-bottom: 40px;
+        }
+        .services .service-box {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .services .service-item {
+            flex: 1 1 calc(33% - 40px);
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #f1f2f6;
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+        .services .service-item:hover {
+            transform: translateY(-10px);
+        }
+        .services .service-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .services .service-item h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #0a3d62;
+        }
+        .services .service-item p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .services .service-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Your Business Name</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-box">
+            <div class="service-item">
+                <img src="services.jpg" alt="Service 1">
+                <h3>Consulting & Strategy</h3>
+                <p>We provide strategic consulting services to help businesses make informed decisions, improve operational efficiency, and achieve their goals.</p>
+            </div>
+            <div class="service-item">
+                <img src="services2.jpg" alt="Service 2">
+                <h3>Technology Solutions</h3>
+                <p>Our expert team delivers cutting-edge technology solutions, including software development, cloud computing, and IT infrastructure management.</p>
+            </div>
+            <div class="service-item">
+                <img src="service3.jpg" alt="Service 3">
+                <h3>Marketing & Branding</h3>
+                <p>We offer comprehensive marketing services, including digital marketing, brand strategy, and creative design, to enhance your brand's visibility.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-item">
+                <img src="service4.jpg" alt="Service 4">
+                <h3>Data Analytics</h3>
+                <p>Leverage the power of data with our analytics services. We help businesses extract insights, make data-driven decisions, and optimize performance.</p>
+            </div>
+            <div class="service-item">
+                <img src="service5.jpg" alt="Service 5">
+                <h3>Financial Planning</h3>
+                <p>Our financial experts offer planning and advisory services to help you manage finances, control costs, and maximize your business's profitability.</p>
+            </div>
+            <div class="service-item">
+                <img src="service6.jpg" alt="Service 6">
+                <h3>Human Resources Solutions</h3>
+                <p>From recruitment to employee management, we provide HR solutions that align with your business's objectives and enhance workplace efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Business Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
